@@ -1,0 +1,27 @@
+module soru(
+input A,B,C,
+output F,Q
+);
+
+wire nA;
+not i1(nA,A);
+
+wire nAorB;
+xor i2(nAorB,nA,B);
+
+wire BandC;
+
+nand i3(BnandC,B,C);
+
+wire nC;
+
+not i4(nC,C);
+
+wire nCorB;
+or i5(nCorB,nC,B);
+
+xnor(F,nAorB,BnandC);
+
+nor(Q,nAorB,BnandC,nCorB);
+
+)

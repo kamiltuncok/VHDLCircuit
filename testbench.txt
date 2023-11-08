@@ -1,0 +1,24 @@
+module tb_soru(
+
+);
+
+reg A,B,C;
+
+wire F,Q;
+
+sorula uut(
+.A(A),
+.B(B),
+.C(C),
+.F(F),
+.Q(Q)
+);
+
+initial begin
+#0 A=0'b0; B=0'b0; C=0'b0; D=0'b0;
+#10 A=0'b1; B=0'b0; C=0'b0; D=0'b0;
+#10 A=0'b0; B=0'b1; C=0'b0; D=0'b0;
+#10 A=0'b0; B=0'b0; C=0'b1; D=0'b0;
+#10 A=0'b0; B=0'b0; C=0'b0; D=0'b1;
+
+end
